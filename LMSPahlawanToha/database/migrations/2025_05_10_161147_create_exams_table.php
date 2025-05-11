@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('exams', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('mata_pelajaran');
             $table->text('gform_link');
             $table->timestamps();
         });
