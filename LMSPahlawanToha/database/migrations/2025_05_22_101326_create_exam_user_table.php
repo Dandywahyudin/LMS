@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('exams', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->text('gform_link');
-            $table->integer('duration')->nullable();
-            $table->string('token')->unique()->nullable();
+        Schema::create('exam_user', function (Blueprint $table) {
+            $table->foreignId('exam_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->timestamp('started_at')->nullable();
+            $table->primary(['exam_id', 'user_id']);
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('exams');
+        Schema::dropIfExists('exam_user');
     }
 };
