@@ -92,12 +92,17 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            
-            <!-- Menu responsive untuk admin -->
+
             @auth
                 @if(auth()->user()->isAdmin())
                     <x-responsive-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
                         {{ __('Admin Panel') }}
+                    </x-responsive-nav-link>
+                @endif
+
+                @if(auth()->user()->role === 'siswa')
+                    <x-responsive-nav-link :href="route('siswa.exams')" :active="request()->routeIs('siswa.exams')">
+                        {{ __('Daftar Ujian') }}
                     </x-responsive-nav-link>
                 @endif
             @endauth
@@ -114,8 +119,7 @@
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
-                
-                <!-- Menu tambahan responsive untuk admin -->
+
                 @auth
                     @if(auth()->user()->isAdmin())
                         <x-responsive-nav-link :href="route('admin.settings')">

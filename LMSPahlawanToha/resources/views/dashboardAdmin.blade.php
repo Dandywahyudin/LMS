@@ -19,6 +19,7 @@
                     <th class="border px-4 py-2">Mata Pelajaran</th>
                     <th class="border px-4 py-2">Token</th>
                     <th class="border px-4 py-2">Link Form</th>
+                    <th class="border px-4 py-2">Durasi (menit)</th>
                     <th class="border px-4 py-2">Aksi</th>
                 </tr>
             </thead>
@@ -31,6 +32,7 @@
                         <td class="border px-4 py-2">
                             <a href="{{ $exam->gform_link }}" class="text-blue-600 underline" target="_blank">Lihat Form</a>
                         </td>
+                        <td class="border px-4 py-2">{{ $exam->duration }}</td>
                         <td class="border px-4 py-2">
                             <form action="{{ route('admin.dashboard.delete', $exam->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus ujian ini?')">
                                 @csrf

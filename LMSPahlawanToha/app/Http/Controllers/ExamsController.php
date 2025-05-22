@@ -28,13 +28,13 @@ class ExamsController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'gform_link' => 'required|url',
-            // 'duration' => 'required|integer|min:1',
+            'duration' => 'required|integer|min:1',
         ]);
 
             $exam = new Exam();
             $exam->title = $request->title;
             $exam->gform_link = $request->gform_link;
-            // $exam->duration = $request->duration;
+            $exam->duration = $request->duration;
             $exam->token = Str::random(8);  // Generate token acak 8 karakter
             $exam->save();  // Simpan data ke database
 

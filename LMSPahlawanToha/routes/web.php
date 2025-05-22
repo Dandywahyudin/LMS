@@ -36,6 +36,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/siswa/ujian', [SiswaExamController::class, 'index'])->name('siswa.exams');
     Route::get('/exam/token', [SiswaExamController::class, 'tokenForm'])->name('exam.token.form');
     Route::post('/exam/token', [SiswaExamController::class, 'checkToken'])->name('exam.token.check');
+    Route::get('/exam/{id}', [SiswaExamController::class, 'show'])->name('siswa.exam.show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

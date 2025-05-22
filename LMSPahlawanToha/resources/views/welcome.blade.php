@@ -12,7 +12,7 @@
         <div class="relative isolate px-3 lg:px-5">
             <div class="min-h-screen flex items-center justify-center px-4">
                 <div class="text-center">
-                    <img src="{{ asset('storage/logopahlawanwoha.png') }}" alt="Logo" class="mx-auto mb-6 w-24 h-24 sm:w-32 sm:h-32 object-contain">
+                    <img src="{{ asset('storage/logopahlawanwoha.png') }}" alt="Logo" class="mx-auto mb-6 w-24 h-24 object-contain">
                     
                     <p class="text-base sm:text-2xl md:text-4xl font-medium text-gray-500">
                         Selamat Datang di Portal Ujian

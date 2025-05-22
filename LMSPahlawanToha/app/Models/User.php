@@ -36,7 +36,7 @@ class User extends Authenticatable
 
     public function exams(): BelongsToMany
     {
-        return $this->belongsToMany(Exam::class)->withTimestamps()->withPivot('started_at');
+        return $this->belongsToMany(Exam::class)->withTimestamps()->withPivot('started_at', 'finished_at');
     }
         
 
