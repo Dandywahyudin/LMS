@@ -16,10 +16,8 @@
 
         "DB_CONNECTION": "mysql",
         "DB_HOST": "nhdbp.h.filess.io",
-        "DB_PORT": 61002,
         "DB_DATABASE": "lmspahlawantoha_feltamount",
         "DB_USERNAME": "lmspahlawantoha_feltamount",
-        "DB_PASSWORD": "c1324a8056b3ebbbf19606c87d2a457bbb10ac88",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
